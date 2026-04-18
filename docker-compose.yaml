@@ -50,20 +50,20 @@ services:
       INSECURE_USE_HTTP: ${INSECURE_USE_HTTP}
     networks:
       - nightscout_network
-    tconnectsync:
-      image: ghcr.io/jwoglom/tconnectsync/tconnectsync:latest
-      container_name: tconnectsync
-      restart: unless-stopped
-      environment:
-        TCONNECT_EMAIL: ${TCONNECT_EMAIL}
-        TCONNECT_PASSWORD: ${TCONNECT_PASSWORD}
-        TCONNECT_REGION: EU
-        NS_URL: ${BASE_URL}
-        NS_SECRET: ${API_SECRET}
-        TIMEZONE_NAME: Europe/London
-      command: --auto-update
-      networks:
-        - nightscout_network
+  tconnectsync:
+    image: ghcr.io/jwoglom/tconnectsync/tconnectsync:latest
+    container_name: tconnectsync
+    restart: unless-stopped
+    environment:
+      TCONNECT_EMAIL: ${TCONNECT_EMAIL}
+      TCONNECT_PASSWORD: ${TCONNECT_PASSWORD}
+      TCONNECT_REGION: EU
+      NS_URL: ${BASE_URL}
+      NS_SECRET: ${API_SECRET}
+      TIMEZONE_NAME: Europe/London
+    command: --auto-update
+    networks:
+      - nightscout_network
 
 volumes:
   mongo-data:
