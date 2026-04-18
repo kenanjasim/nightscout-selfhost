@@ -12,8 +12,6 @@ services:
     image: nightscout/cgm-remote-monitor:latest
     container_name: nightscout
     restart: always
-    profiles:
-      - nightscout
     depends_on:
       - mongo
     ports:
