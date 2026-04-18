@@ -51,7 +51,7 @@ services:
     networks:
       - nightscout_network
   tconnectsync:
-    image: ghcr.io/jwoglom/tconnectsync/tconnectsync:2.3.4
+    image: ghcr.io/jwoglom/tconnectsync/tconnectsync:v2.3.4
     container_name: tconnectsync
     restart: unless-stopped
     environment:
