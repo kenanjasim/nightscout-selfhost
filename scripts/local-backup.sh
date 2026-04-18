@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DATE=$(date +%Y-%m-%d)
-BACKUP_DIR="/home/kenan/nightscout-backups"
+BACKUP_DIR="~/nightscout-backups"
 CONTAINER="nightscout-mongo"
 
 mkdir -p $BACKUP_DIR
